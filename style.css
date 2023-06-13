@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    position: relative;
+    
+}
+
+main{
+    width: 1440px;
+    height: 724px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+article{
+    width: 921px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(3, 307px);
+}
+
+.sec1{
+    background-color: hsl(31, 77%, 52%);
+    border-radius: 10px 0px 0px 10px;
+    padding: 50px;
+}
+
+.sec2{
+    background-color: hsl(184, 100%, 22%);
+    padding: 50px;
+}
+
+.sec3{
+    background-color: hsl(179, 100%, 13%);
+    border-radius: 0px 10px 10px 0px;
+    padding: 50px;
+}
+
+:is(.sec1, .sec2, .sec3) h1{
+    font-size: 2rem;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-family: 'Big Shoulders Display', cursive;
+    color: hsl(0, 0%, 95%);
+}
+
+:is(.sec1, .sec2, .sec3) p{
+    font-size: 16px;
+    line-height: 25px;
+    color: hsla(0, 0%, 100%, 0.75);
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+:is(.sec1, .sec2, .sec3) a{
+    background-color: white;
+    width: 145px;
+    height: 45px;
+    margin-top: 90px;
+    line-height: 41px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+    mix-blend-mode: lighten;
+    font-family: 'Lexend Deca', sans-serif;
+    border: 2px solid white;
+}
+
+:is(.sec1, .sec2, .sec3) a:hover{
+    color: white;
+    background-color: transparent;
+}
+
+@media (max-width: 375px){
+
+    html{
+        height: 100%;
+    }
+
+    body{
+        min-height: 1506px;
+    }
+    main{
+        width: 375px;
+        height: 1506px;
+        padding-top: 90px;
+        padding-bottom: 90px;
+        
+    }
+    
+    article{
+        width: 330px;
+        height: 1326px;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 442px);
+    }
+    
+    :is(.sec1, .sec2, .sec3) a{
+        margin-top: 20px;
+    }
+    
+    .sec1{
+        border-radius: 10px 10px 0px 0px;
+    }
+    
+    .sec3{
+        border-radius: 0px 0px 10px 10px;
+    }
+}
