@@ -57,7 +57,7 @@ article{
 }
 
 :is(.sec1, .sec2, .sec3) p{
-    font-size: 16px;
+    font-size: 14.7px;
     line-height: 25px;
     color: hsla(0, 0%, 100%, 0.75);
     font-family: 'Lexend Deca', sans-serif;
